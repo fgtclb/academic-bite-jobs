@@ -30,6 +30,6 @@ composer require fgtclb/academic-bite-jobs
 
 ## Credits
 
-This extension was created the [FGTCLB GmbH](https://www.fgtclb.com/).
+This extension was created by the [FGTCLB GmbH](https://www.fgtclb.com/).
 
 [Find more TYPO3 extensions we have developed](https://github.com/fgtclb/).
