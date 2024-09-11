@@ -5,7 +5,7 @@
         <header/>
         <body>
             <trans-unit id="fe.b-ite.no-jobs">
-                <source>There are currently no job vacancies.</source>
+                <source>We currently have no job vacancies. / We currently have no job vacancies in the "%thema%" section. </source>
             </trans-unit>
         </body>
     </file>
