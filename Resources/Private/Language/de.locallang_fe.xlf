@@ -5,8 +5,8 @@
         <header/>
         <body>
             <trans-unit id="fe.b-ite.no-jobs">
-                <source>We currently have no job vacancies. / We currently have no job vacancies in the "%thema%" section.</source>
-                <target>Derzeit haben wir leider im Bereich %thema% keine offenen Stellen zu besetzen.</target>
+                <source>We currently have no job vacancies. / We currently have no job vacancies in the %s section.</source>
+                <target>Derzeit haben wir leider im Bereich %s keine offenen Stellen zu besetzen.</target>
             </trans-unit>
         </body>
     </file>
