@@ -98,6 +98,30 @@ final class SiteSetDeliveryTest extends AbstractAcademicBiteJobsTestCase
     }
 
     /**
+     * The hide half, asserted on its own. Without it the re-enable assertion below
+     * cannot fail: it checks that the content element is absent from `removeItems`,
+     * and an empty list satisfies that just as well as a correct one.
+     */
+    #[Test]
+    public function theContentElementIsHiddenWithoutASiteSet(): void
+    {
+        $this->setUpSite();
+
+        $pageTsConfig = BackendUtility::getPagesTSconfig(1);
+        $removeItems = GeneralUtility::trimExplode(
+            ',',
+            (string)($pageTsConfig['TCEFORM.']['tt_content.']['CType.']['removeItems'] ?? ''),
+            true,
+        );
+
+        $this->assertContains(
+            'academicbitejobs_list',
+            $removeItems,
+            'The content element is selectable although no set and no page TSconfig enable it.',
+        );
+    }
+
+    /**
      * The other half of the delivery: the content element is hidden for the whole
      * installation, and naming the set in the site configuration is one of the two ways
      * to bring it back. No page carries a `tsconfig_includes` entry here, so the set is
